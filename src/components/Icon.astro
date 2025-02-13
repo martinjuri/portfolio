@@ -1,0 +1,5 @@
+---
+const { name, class: className = '' } = Astro.props;
+---
+
+<img src={`/icons/${name}.svg`} alt={name} class={className} loading="lazy" />

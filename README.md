@@ -14,27 +14,13 @@ Este sitio web personal está construido con [Astro.js](https://astro.build) y [
 
 ---
 
-## Tabla de Contenidos
-
-- [Instalación](#instalación)
-- [Uso](#uso)
-- [Desarrollo](#desarrollo)
-- [Estructura del Proyecto](#estructura-del-proyecto)
-- [Licencia](#licencia)
-- [Contacto](#contacto)
-
----
-
 ## Instalación
 
 1. Clona el repositorio:
    git clone https://github.com/martinjuri/portfolio.git
 
 2. Instala las dependencias:
-    npm install
+   npm install
 
 3. Para iniciar el servidor de desarrollo:
-    npm run dev
-
-
-
+   npm run dev

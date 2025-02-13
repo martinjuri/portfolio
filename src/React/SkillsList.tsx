@@ -47,7 +47,7 @@ const SkillsList = () => {
 	return (
 		<div className="text-left pt-3 md:pt-9">
 			<h3 className="text-[var(--white)] text-3xl md:text-4xl font-semibold md:mb-6">
-				¿Que puedo hacer?
+				¿Qué puedo hacer?
 			</h3>
 			<ul className="space-y-4 mt-4 text-lg">
 				{Object.entries(skills).map(([category, items]) => (

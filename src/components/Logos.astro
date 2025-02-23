@@ -1,0 +1,34 @@
+---
+import { Icon } from 'astro-icon/components';
+
+const technologies = [
+	'nextjs',
+	'astro',
+	'react',
+	'typescript',
+	'tailwindcss',
+	'bootstrap',
+	'html5',
+	'css3',
+	'javascript',
+	'git',
+	'prisma',
+	'vue',
+	'jest',
+];
+---
+
+<div class="max-w-5xl mx-auto py-8">
+	<div class="flex flex-wrap justify-center gap-8 md:gap-12">
+		{
+			technologies.map((tech) => (
+				<div class="flex items-center gap-2 transition-all duration-300">
+					<Icon name={tech} class="h-7 w-auto object-contain opacity-60" />
+					<span class="text-lg font-medium text-[var(--white-icon)]">
+						{tech.charAt(0).toUpperCase() + tech.slice(1)}
+					</span>
+				</div>
+			))
+		}
+	</div>
+</div>

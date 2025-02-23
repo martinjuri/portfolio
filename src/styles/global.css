@@ -1,0 +1,64 @@
+@font-face {
+	font-family: 'Josefin Sans', serif;
+	font-optical-sizing: auto;
+	font-weight: <weight>;
+	font-style: normal;
+}
+
+:root {
+	--background: #101010;
+	--sec: #00bfff;
+	--white: #dfdfdf;
+	--white-icon: #f3f3f398;
+	--white-icon-tr: #f3f3f310;
+	--font: 'Josefin Sans', system-ui, sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: var(--font);
+}
+
+*::selection {
+	background-color: var(--sec);
+	color: var(--background);
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+@media (max-width: 767px) {
+	body {
+		padding-bottom: 70px;
+	}
+}
+
+nav a.active {
+	color: white !important;
+}
+
+::-webkit-scrollbar {
+	width: 15px;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--container);
+	border-radius: 30px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--background);
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--sec);
+}
+
+* {
+	scrollbar-width: thin;
+	scrollbar-color: var(--background) var(--container);
+}

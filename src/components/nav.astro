@@ -1,0 +1,43 @@
+---
+
+---
+
+<nav
+	class="fixed bottom-0 left-0 right-0 md:top-6 md:left-1/2 md:transform md:-translate-x-1/2 z-50 bg-[#1414149c] transition-all md:w-[33rem] rounded-t-2xl md:rounded-full h-16 border border-gray-200"
+>
+	<ul class="flex h-full justify-around items-center">
+		<li>
+			<a href="#home" class="text-[var(--white-icon)] text-xs md:text-base">Inicio</a>
+		</li>
+		<li>
+			<a href="#projects" class="text-[var(--white-icon)] text-xs md:text-base">Proyectos</a>
+		</li>
+		<li>
+			<a href="#contact" class="text-[var(--white-icon)] text-xs md:text-base">Contacto</a>
+		</li>
+	</ul>
+</nav>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const sections = document.querySelectorAll('section[id]');
+		const navLinks = document.querySelectorAll("nav a[href^='#']");
+		const observerOptions = { threshold: 0.6 };
+
+		const observerCallback = (entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					navLinks.forEach((link) => link.classList.remove('active'));
+					const id = entry.target.getAttribute('id');
+					const activeLink = document.querySelector(`nav a[href="#${id}"]`);
+					if (activeLink) {
+						activeLink.classList.add('active');
+					}
+				}
+			});
+		};
+
+		const observer = new IntersectionObserver(observerCallback, observerOptions);
+		sections.forEach((section) => observer.observe(section));
+	});
+</script>
